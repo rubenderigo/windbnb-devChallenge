@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import ContainerStays from './components/ContainerStays/ContainerCard';
+import DrawerFilter from './components/DrawerFilter/DrawerFilter';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
+import { stays } from './data/stays';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <DrawerFilter />
+      <Header />
+      <Layout>
+        <ContainerStays stays={stays} />
+      </Layout>
+    </>
   );
 }
 

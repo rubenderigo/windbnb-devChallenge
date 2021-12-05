@@ -1,0 +1,57 @@
+.card-stays {
+  width: 395px;
+}
+
+.img-stay {
+  border-radius: 24px;
+}
+
+.header-stay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-stay div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.superHost-stay {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #4f4f4f;
+  border: 1px solid #4f4f4f;
+  border-radius: 12px;
+  padding: 7px 9px 7px 9px;
+  margin-right: 11px;
+}
+
+.type-stay,
+.rating-stay {
+  color: #828282;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.star {
+  color: #eb5757;
+  padding-right: 7px;
+}
+
+.title-stay {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 0;
+}

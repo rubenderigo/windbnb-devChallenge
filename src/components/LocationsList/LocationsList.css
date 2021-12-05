@@ -1,0 +1,22 @@
+.list-location {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  font-family: 'Mulish', sans-serif;
+  color: #4f4f4f;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+}
+
+ul li span {
+  padding-right: 10px;
+}

@@ -1,8 +1,8 @@
 import { useField } from 'formik';
 import './Input.css';
 
-const Input = ({ label, classLabel, ...props }) => {
-  const [field, meta] = useField(props);
+const Input = ({ label, classLabel, onClick, value, placeholder, ...props }) => {
+  const [field] = useField(props);
 
   return (
     <div>
@@ -11,10 +11,12 @@ const Input = ({ label, classLabel, ...props }) => {
       </label>
       <input
         className="input-search"
-        placeholder={props.placeholder}
+        placeholder={placeholder}
+        value={value}
+        onClick={onClick}
+        autocomplete="off"
         {...field}
       />
-      {meta.initialTouched && console.log('hola')}
     </div>
   );
 };

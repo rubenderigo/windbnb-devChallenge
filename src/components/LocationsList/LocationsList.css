@@ -1,6 +1,8 @@
-.list-location {
+.container-list-location {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -12,9 +14,10 @@ ul li {
   color: #4f4f4f;
   font-size: 14px;
   line-height: 18px;
-  margin-top: 36px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 ul li span {

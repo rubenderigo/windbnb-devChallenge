@@ -1,10 +1,13 @@
+import { useContext } from 'react';
+import { StayContext } from '../../context/StayContext';
 import Card from '../Card/Card';
 import './ContainerStays.css'
 
-const ContainerStays = ({ stays }) => {
+const ContainerStays = () => {
+  const { state } = useContext(StayContext)
   return (
     <div className="container-stays">
-      {stays.map((stay) => (
+      {state.map((stay) => (
         <Card key={stay.title} stay={stay} />
       ))}
     </div>

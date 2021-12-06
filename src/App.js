@@ -1,23 +1,21 @@
 import { useState } from 'react';
-import ContainerStays from './components/ContainerStays/ContainerCard';
-import DrawerFilter from './components/DrawerFilter/DrawerFilter';
+import ContainerStays from './components/StaysContainer/StaysContainer';
+import FilterDrawer from './components/FilterDrawer/FilterDrawer';
 import Header from './components/Header/Header';
 import Layout from './components/Layout/Layout';
-import { StayContextProvider } from './context/StayContext';
+import { StayContextProvider } from 'context/StayContext';
 
 function App() {
   const [showDrawer, setShowDrawer] = useState(false);
 
   return (
-    <>
-      {showDrawer && <DrawerFilter />}
+    <StayContextProvider>
+      {showDrawer && <FilterDrawer />}
       <Header setShowDrawer={setShowDrawer} showDrawer={showDrawer} />
       <Layout>
-        <StayContextProvider>
-          <ContainerStays />
-        </StayContextProvider>
+        <ContainerStays />
       </Layout>
-    </>
+    </StayContextProvider>
   );
 }
 

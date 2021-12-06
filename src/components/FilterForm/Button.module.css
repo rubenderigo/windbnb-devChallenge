@@ -1,11 +1,11 @@
-.button-search-container {
+.button-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
 
-.button-search {
+.button {
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -14,7 +14,7 @@
   color: #eb5757;
 }
 
-.button-search-drawer {
+.button-secondary {
   background-color: #EB5757;
   color: #ffff;
   border-radius: 16px;
@@ -29,6 +29,6 @@
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-.button-search-drawer span {
+.button-secondary span {
   padding-right: 10px;
 }

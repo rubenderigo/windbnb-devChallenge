@@ -1,0 +1,20 @@
+.title-cant-stays-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 210px 20px 210px;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.amount-stays {
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+}

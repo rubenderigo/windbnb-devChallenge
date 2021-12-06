@@ -1,16 +1,13 @@
-import Title from '../Title/Title';
-import CantStays from '../CantStays/CantStays';
-import './Layout.css';
-import { StayContextProvider } from '../../context/StayContext';
+import Title from 'components/Layout/Title';
+import AmountStay from 'components/Layout/AmountStays';
+import styles from './Layout.module.css';
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <div className="container-title-cant-stays">
+      <div className={styles["title-cant-stays-container"]}>
         <Title>Stays in Finland</Title>
-        <StayContextProvider>
-          <CantStays />
-        </StayContextProvider>
+        <AmountStay />
       </div>
       {children}
     </div>

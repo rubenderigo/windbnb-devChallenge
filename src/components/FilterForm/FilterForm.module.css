@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-filter {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-right: 210px;
+  width: 297px;
+}
+
+.form-filter-secondary { 
+  width: 1200px;
+  height: 55px;
+  margin: 50px auto 0 auto;
+}
+
+.form-filter-secondary input {
+  width: 400px;
+  height: 55px;
+  text-align: start;
+  padding: 24px 26px 10px 26px;
+}

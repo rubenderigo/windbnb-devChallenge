@@ -1,5 +1,6 @@
 import { createContext, useReducer, useState } from 'react';
 import { stays } from 'data/stays';
+// import { locations } from 'data/locations';
 
 const initialState = {
   stays: stays,
@@ -12,26 +13,19 @@ const reducer = (state = initialState, action) => {
     case 'FILTER_ONLY_LOCATION':
       return {
         ...state,
-        stays: state.stays.filter((stay) => stay.city === action.payload),
-      };
-    case 'FILTER_ONLY_GUESTS':
-      return {
-        ...state,
-        stays: state.stays.filter((stay) => stay.maxGuests <= action.payload),
+        location: action.payload.city,
+        stays: state.stays.filter((stay) => stay.city === action.payload.city),
       };
     case 'FILTER_LOCATION_GUESTS':
       return {
         ...state,
+        location: action.payload.city,
+        amountGuests: action.payload.amountGuests,
         stays: state.stays.filter(
           (stay) =>
             stay.city === action.payload.city &&
-            stay.maxGuests >= action.payload.cantGuests
+            stay.maxGuests >= action.payload.amountGuests
         ),
-      };
-    case 'FILTER_SET':
-      return {
-        ...state,
-        stays: stays,
       };
     default:
       return state;
@@ -45,34 +39,16 @@ export const StayContextProvider = ({ children }) => {
   const [location, setLocation] = useState('Helsinki, Finland');
   const [amountAdults, setAmountAdults] = useState(0);
   const [amountChildren, setAmountChildren] = useState(0);
-  const filter = {
-    onlyLocation: (value) => dispatch({ type: 'FILTER_ONLY_LOCATION', payload: value.city }),
-    onlyGuests: (value) => dispatch({ type: 'FILTER_ONLY_GUESTS', payload: Number(value.guests) }),
-    locationGuests: (values) => 
-      dispatch({
-        type: 'FILTER_LOCATION_GUESTS',
-        payload: {
-          city: values.location,
-          cantGuests: Number(values.guests),
-        },
-      }),
-    set: () => dispatch({ type: 'FILTER_SET' }),
-  };
-  const handleGuests = {
-    amountAdults,
-    amountChildren,
-    setChildren: (value) => setAmountChildren(value),
-    setAdults: (value) => setAmountAdults(value),
-  };
-  const handleLocation = {
-    location,
-    set: (value) => setLocation(Object.keys(value).toString()),
-  };
+  
   const value = {
     state,
-    filter,
-    handleGuests,
-    handleLocation,
+    location,
+    amountAdults,
+    amountChildren,
+    setLocation,
+    setAmountAdults,
+    setAmountChildren,
+    dispatch,
   };
 
   return <StayContext.Provider value={value}>{children}</StayContext.Provider>;

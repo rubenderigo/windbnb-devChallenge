@@ -1,21 +1,20 @@
-import { useContext } from 'react';
-import { StayContext } from 'context/StayContext';
 import { locations } from 'data/locations';
-import styles from './SelectLocations.module.css'
+import styles from './SelectLocations.module.css';
+import { useHandleLocation } from 'hooks/location';
 
 const LocationsList = () => {
-  const { handleLocation } = useContext(StayContext);
+  const [handleLocation] = useHandleLocation();
 
   return (
     <div>
-      <ul className={styles["container-list-location"]}>
+      <ul className={styles['container-list-location']}>
         {locations.map((location) => (
           <li
-            className={styles["item-location"]}
-            key={Object.keys(location)}
-            onClick={() => handleLocation.set(location)}>
+            className={styles['item-location']}
+            key={location.shortName}
+            onClick={() => handleLocation.set(location.shortName)}>
             <span className="material-icons">location_on</span>
-            {Object.values(location)}
+            {location.longName}
           </li>
         ))}
       </ul>

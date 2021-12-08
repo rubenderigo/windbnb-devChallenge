@@ -1,6 +1,6 @@
 export const locations = [
-  { Helsinki: 'Helsinki, Finland' },
-  { Turku: 'Turku, Finland' },
-  { Oulu: 'Oulu, Finland' },
-  { Vaasa: 'Vaasa, Finland' },
+  { shortName: 'Helsinki', longName: 'Helsinki, Finland' },
+  { shortName: 'Turku', longName: 'Turku, Finland' },
+  { shortName: 'Oulu', longName: 'Oulu, Finland' },
+  { shortName: 'Vaasa', longName: 'Vaasa, Finland' },
 ];

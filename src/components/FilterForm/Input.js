@@ -1,20 +1,18 @@
-import { useField } from 'formik';
 import styles from './Input.module.css';
 
 const Input = (props) => {
-  const [field] = useField(props);
-
   return (
     <div>
-      <label className={styles[props.classLabel]} htmlFor={field.name}>
+      <label className={styles[props.classLabel]}>
         {props.label}
       </label>
       <input
+        name={props.name}
         placeholder={props.placeholder}
         onClick={props.onClick}
         autoComplete="off"
-        {...field}
         value={props.value}
+        readOnly
       />
     </div>
   );

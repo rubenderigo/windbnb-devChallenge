@@ -1,24 +1,23 @@
-import { useContext} from 'react';
-import { StayContext } from 'context/StayContext';
 import CountGuests from 'components/SelectGuests/CountGuests';
+import { useHandleGuests } from 'hooks/guests';
 
 const SelectGuests = () => {
-  const { handleGuests } = useContext(StayContext);
+  const [handleGuests] = useHandleGuests();
 
   return (
     <div className="container-select-guests">
-        <CountGuests
-          title="Adults"
-          desciption="Ages 13 or above"
-          value={handleGuests.amountAdults}
-          setValue={handleGuests.setAdults}
-        />
-        <CountGuests
-          title="Children"
-          desciption="Ages 2-12"
-          value={handleGuests.amountChildren}
-          setValue={handleGuests.setChildren}
-        />
+      <CountGuests
+        title="Adults"
+        desciption="Ages 13 or above"
+        value={handleGuests.amountAdults}
+        setValue={handleGuests.setAdults}
+      />
+      <CountGuests
+        title="Children"
+        desciption="Ages 2-12"
+        value={handleGuests.amountChildren}
+        setValue={handleGuests.setChildren}
+      />
     </div>
   );
 };

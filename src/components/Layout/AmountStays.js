@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import { StayContext } from 'context/StayContext';
 import styles from './Layout.module.css';
+import { useFilterStays } from 'hooks/filter';
 
 const AmountStay = () => {
-  const { state } = useContext(StayContext);
-  const amountState = () => state.stays.length > 12 ? '12+' : state.stays.length;
+  const { state } = useFilterStays();
+  const amountState = () =>
+    state.stays.length > 12 ? '12+' : state.stays.length;
 
   return (
     <div>

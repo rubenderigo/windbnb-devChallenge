@@ -14,14 +14,14 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         location: action.payload.city,
-        stays: state.stays.filter((stay) => stay.city === action.payload.city),
+        stays: stays.filter((stay) => stay.city === action.payload.city),
       };
     case 'FILTER_LOCATION_GUESTS':
       return {
         ...state,
         location: action.payload.city,
         amountGuests: action.payload.amountGuests,
-        stays: state.stays.filter(
+        stays: stays.filter(
           (stay) =>
             stay.city === action.payload.city &&
             stay.maxGuests >= action.payload.amountGuests

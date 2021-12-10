@@ -23,6 +23,7 @@ const FilterDrawer = ({ closeDrawer }) => {
             classForm="form-filter-secondary"
             showLocations={showLocations}
             showGuests={showGuests}
+            closeDrawer={closeDrawer}
             setShowGuests={setShowGuests}
             setShowLocations={setShowLocations}
           />

@@ -45,7 +45,7 @@ export const StayContextProvider = ({ children }) => {
   const allLocations = locations;
 
   useEffect(() => {
-    dispatch({ type: 'FILTER_ONLY_LOCATION', payload: { city: 'Helsinki' } });
+    dispatch({ type: 'FILTER_ONLY_LOCATION', payload: { city: { shortName: 'Helsinki'} } });
   }, []);
 
   const value = {

@@ -50,8 +50,12 @@
 }
 
 .title-stay {
+  max-width: 330px;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   margin-top: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
 }

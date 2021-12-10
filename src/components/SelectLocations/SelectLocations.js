@@ -1,4 +1,3 @@
-import { locations } from 'data/locations';
 import styles from './SelectLocations.module.css';
 import { useHandleLocation } from 'hooks/location';
 
@@ -8,11 +7,11 @@ const LocationsList = () => {
   return (
     <div>
       <ul className={styles['container-list-location']}>
-        {locations.map((location) => (
+        {handleLocation.allLocations.map((location) => (
           <li
             className={styles['item-location']}
             key={location.shortName}
-            onClick={() => handleLocation.set(location.shortName)}>
+            onClick={() => handleLocation.set(location)}>
             <span className="material-icons">location_on</span>
             {location.longName}
           </li>

@@ -10,7 +10,6 @@ const FilterForm = (props) => {
   const { submit } = useSubmit();
   const [handleLocation] = useHandleLocation();
   const [handleGuests] = useHandleGuests();
-
   const showSelectLocation = () =>
     props.showLocations !== undefined &&
     (props.setShowLocations(true), props.setShowGuests(false));
@@ -19,16 +18,17 @@ const FilterForm = (props) => {
     (props.setShowLocations(false), props.setShowGuests(true));
   const showDrawer = () =>
     props.showDrawer !== undefined && props.setShowDrawer(true);
+  const closeDrawer = (e) => (submit(e), () => props.setShowDrawer(false));
 
   return (
     <div className={styles[props.classForm]}>
-      <form onClick={showDrawer} onSubmit={submit}>
+      <form onClick={showDrawer} onSubmit={closeDrawer}>
         <Input
           name="location"
           label="Location"
           placeholder="Location"
           classLabel={props.classLabel}
-          value={handleLocation.location}
+          value={handleLocation.location.longName}
           onClick={showSelectLocation}
         />
         <Input

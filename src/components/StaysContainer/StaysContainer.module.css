@@ -1,6 +1,7 @@
 .container-stays {
+  margin-left: 210px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 49px 30px;
 }

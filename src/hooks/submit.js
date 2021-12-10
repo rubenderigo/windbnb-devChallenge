@@ -13,7 +13,7 @@ export const useSubmit = () => {
   };
 
   const submit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (amountSelected() === 0) {
       filter.onlyLocation(data);
     } else {

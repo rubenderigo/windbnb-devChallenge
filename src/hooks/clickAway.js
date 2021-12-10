@@ -1,25 +1,28 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 
-export const useClickAway = () => {
-  const [active, setActive] = useState(false);
-  const ref = useRef(null);
+const useClickAway = ({ ref, handleClick }) => {
+  useEffect(
+    () => {
+      const handleDocumentClick = event => {
+        const node = ref.current;
+        const doc = (node && node.ownerDocument) || document;
+        if (
+          doc.documentElement &&
+          doc.documentElement.contains(event.target) &&
+          !node.contains(event.target)
+        ) {
+          handleClick(event);
+        }
+      };
 
-  function handleClickAway(e) {
-    if (!ref.current.contains(e.target)) setActive(false);
-  }
+      document.addEventListener("click", handleDocumentClick);
 
-  function toggle() {
-    setActive(!active);
-  }
+      return () => {
+        document.removeEventListener("click", handleDocumentClick);
+      };
+    },
+    [ref, handleClick]
+  );
+};
 
-  useEffect(() => {
-    if (active) document.addEventListener("mousedown", handleClickAway);
-    else document.removeEventListener("mousedown", handleClickAway);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickAway);
-    };
-  }, [active]);
-
-  return { ref, active, setActive, toggle };
-}
+export default useClickAway;

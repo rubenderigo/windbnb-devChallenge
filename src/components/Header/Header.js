@@ -5,7 +5,9 @@ import styles from './Header.module.css';
 const Header = ({ showDrawer, setShowDrawer }) => {
   return (
     <div className={styles['header']}>
-      <Logo className={styles['logo']} />
+      <div className={styles['logo-container']}>
+        <Logo className={styles['logo']} />
+      </div>
       <FormSearch
         classButton="button"
         classForm="form-filter"

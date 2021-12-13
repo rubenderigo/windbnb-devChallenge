@@ -9,3 +9,20 @@
 .logo {
   margin-left: 210px;
 }
+
+@media only screen and (max-width: 1100px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin: auto;
+    padding-top: 22px;
+    padding-left: 20px;
+  }
+}

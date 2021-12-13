@@ -30,3 +30,37 @@
 .location-guests-container .guests {
   margin-left: 0;
 }
+
+@media only screen and (max-width: 1100px) { 
+  .location-guests-container .location { 
+    left: 20%;
+  }
+
+  .location-guests-container .guests {
+    left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1100px) { 
+  .drawer-container {
+    top: 0;
+    height: 100%;
+  }
+
+  .drawer { 
+    height: 80%;
+  }
+
+  .location-guests-container .location { 
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    padding: 0;
+  }
+
+  .location-guests-container .guests {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+  }
+}

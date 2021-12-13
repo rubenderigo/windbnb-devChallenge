@@ -18,3 +18,27 @@
   line-height: 17px;
   color: #4F4F4F;
 }
+
+@media only screen and (max-width: 600px) {
+  .title-cant-stays-container {
+    margin-left: 13px;
+    margin-top: 35px;
+    width: 90%;
+  }
+
+  .title { 
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .title-cant-stays-container {
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  .title { 
+    font-size: 20px;
+  }
+}

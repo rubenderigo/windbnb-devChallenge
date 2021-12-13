@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState, useEffect } from 'react';
+import { createContext, useReducer, useState } from 'react';
 import { stays } from 'data/stays';
 import { locations } from 'data/locations';
 
@@ -43,10 +43,6 @@ export const StayContextProvider = ({ children }) => {
   const [amountAdults, setAmountAdults] = useState(0);
   const [amountChildren, setAmountChildren] = useState(0);
   const allLocations = locations;
-
-  useEffect(() => {
-    dispatch({ type: 'FILTER_ONLY_LOCATION', payload: { city: { shortName: 'Helsinki'} } });
-  }, []);
 
   const value = {
     state,

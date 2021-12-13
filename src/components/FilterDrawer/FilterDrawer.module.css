@@ -31,6 +31,13 @@
   margin-left: 0;
 }
 
+.close-drawer{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) { 
   .drawer-container {
     top: 0;

@@ -23,12 +23,6 @@ form {
   padding: 24px 26px 10px 26px;
 }
 
-@media only screen and (max-width: 600px) {
-  .form-filter-secondary form button {
-    bottom: 30%;
-  }
-}
-
 @media only screen and (max-width: 1100px) {
   .form-filter {
     margin: auto;
@@ -68,5 +62,12 @@ form {
 
   .form-filter-secondary form input:focus {
     border-radius: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-filter-secondary form button {
+    bottom: 20%;
+    left: 32%;
   }
 }

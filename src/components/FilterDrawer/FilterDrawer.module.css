@@ -31,24 +31,14 @@
   margin-left: 0;
 }
 
-@media only screen and (max-width: 1100px) { 
-  .location-guests-container .location { 
-    left: 20%;
-  }
-
-  .location-guests-container .guests {
-    left: 25%;
-  }
-}
-
-@media only screen and (max-width: 1100px) { 
+@media only screen and (max-width: 768px) { 
   .drawer-container {
     top: 0;
     height: 100%;
   }
 
   .drawer { 
-    height: 80%;
+    height: 90%;
   }
 
   .location-guests-container .location { 
@@ -62,5 +52,17 @@
     position: absolute;
     top: 25%;
     left: 45%;
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+  .location-guests-container .location {
+    left: 20%;
+    margin-top: 40px;
+  }
+
+  .location-guests-container .guests {
+    left: 35%;
+    margin-top: 40px;
   }
 }

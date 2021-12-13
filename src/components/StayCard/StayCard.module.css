@@ -60,7 +60,7 @@
   overflow: hidden;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 768px) {
   .card-stays {
     width: 350px;
   }

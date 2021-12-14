@@ -7,7 +7,7 @@
 
 .drawer {
   width: 100%;
-  height: 50%;
+  height: 60%;
   background-color: #ffff;
   display: flex;
   justify-content: center;
@@ -20,6 +20,7 @@
   flex-direction: row;
   justify-content: flex-start;
   margin: auto;
+  margin-top: 50px;
 }
 
 .location-guests-container .location {
@@ -38,6 +39,21 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1024px) { 
+  .drawer {
+    height: 70%;
+  }
+
+  .location-guests-container .location {
+    margin-left: 150px;
+  }
+
+  .location-guests-container .guests {
+    margin-left: -80px;
+  }
+
+}
+
 @media only screen and (max-width: 768px) { 
   .drawer-container {
     top: 0;
@@ -50,26 +66,36 @@
 
   .location-guests-container .location { 
     position: absolute;
-    top: 25%;
-    left: 40%;
+    top: 30%;
+    left: 20%;
     padding: 0;
   }
 
   .location-guests-container .guests {
     position: absolute;
-    top: 25%;
-    left: 45%;
+    top: 30%;
+    left: 52%;
   }
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 425px) { 
   .location-guests-container .location {
-    left: 20%;
-    margin-top: 40px;
+    left: -15%;
+    top: 30%;
   }
 
   .location-guests-container .guests {
-    left: 35%;
-    margin-top: 40px;
+    left: 50%;
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 320px) { 
+  .location-guests-container .location {
+    left: -20%;
+  }
+
+  .location-guests-container .guests {
+    left: 55%;
   }
 }

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import FormSearch from "components/FilterForm/FilterForm";
+import FilterForm from "components/FilterForm/FilterForm";
 import SelectLocations from "components/SelectLocations/SelectLocations";
 import SelectGuests from "components/SelectGuests/SelectGuests";
 import styles from "./FilterDrawer.module.css";
@@ -16,7 +16,7 @@ const FilterDrawer = ({ closeDrawer }) => {
       <div className={styles["drawer"]} ref={filterDrawer}>
         <span className={`material-icons ${styles["close-drawer"]}`} onClick={closeDrawer}>close</span>
         <div>
-          <FormSearch
+          <FilterForm
             showSearch
             showLabel
             classLabel="label"

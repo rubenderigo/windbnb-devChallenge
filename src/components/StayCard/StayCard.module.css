@@ -1,5 +1,6 @@
 .card-stays {
-  width: 395px;
+  width: 350px;
+  margin: 30px;
 }
 
 .img-stay {
@@ -62,7 +63,33 @@
 
 @media only screen and (max-width: 768px) {
   .card-stays {
+    width: 310px;
+    margin-bottom: 10px;
+  }
+
+  .img-stay {
+    width: 310px;
+    height: 210px;
+  }
+
+  .type-stay,
+  .rating-stay {
+    font-size: 11px;
+  }
+
+  .super-host-stay {
+    font-size: 9px;
+  }
+
+  .title-stay { 
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .card-stays {
     width: 350px;
+    margin: 10px;
   }
 
   .img-stay {
@@ -81,5 +108,29 @@
 
   .title-stay { 
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .card-stays {
+    width: 300px;
+  }
+
+  .img-stay {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .type-stay,
+  .rating-stay {
+    font-size: 10px;
+  }
+
+  .super-host-stay {
+    font-size: 8px;
+  }
+
+  .title-stay { 
+    font-size: 12px;
   }
 }

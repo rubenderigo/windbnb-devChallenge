@@ -11,6 +11,17 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .header{
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo{
+    margin-left: 90px;
+    margin-right: 170px;
+  }
+}
+
+@media only screen and (max-width: 427px) {
   .header {
     flex-direction: column;
   }

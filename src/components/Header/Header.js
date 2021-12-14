@@ -1,5 +1,6 @@
 import { ReactComponent as Logo } from 'assets/logo.svg';
-import FormSearch from 'components/FilterForm/FilterForm';
+import FilterForm from 'components/FilterForm/FilterForm';
+
 import styles from './Header.module.css';
 
 const Header = ({ showDrawer, setShowDrawer }) => {
@@ -8,7 +9,7 @@ const Header = ({ showDrawer, setShowDrawer }) => {
       <div className={styles['logo-container']}>
         <Logo className={styles['logo']} />
       </div>
-      <FormSearch
+      <FilterForm
         classButton="button"
         classForm="form-filter"
         showSearch={false}

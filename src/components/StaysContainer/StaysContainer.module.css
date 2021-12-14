@@ -1,23 +1,44 @@
 .container-stays {
-  margin-left: 210px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-stays > div {
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 49px 30px;
+  padding-left: 50px;
 }
 
 @media only screen and (max-width: 768px) {
-  .container-stays {
-    margin-left: auto;
-    justify-content: center;
-    gap: 49px 30px;
+  .container-stays > div { 
+    padding: 0;
+    width: auto;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .container-stays {
-    margin-left: auto;
+@media only screen and (max-width: 425px) {
+  .container-stays > div { 
+    padding: 0;
     justify-content: center;
-    gap: 32px 0;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-stays > div { 
+    padding: 0;
+    justify-content: center;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .container-stays > div { 
+    padding: 0;
+    justify-content: center;
+    width: auto;
   }
 }

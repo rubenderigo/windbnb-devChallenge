@@ -8,9 +8,11 @@ const StaysContainer = () => {
 
   return (
     <div className={styles['container-stays']}>
-      {state.stays.length ? state.stays.map((stay) => (
-        <StayCard key={stay.title} stay={stay} />
-      )) : <EmptyStays />}
+      <div>
+        {state.stays.length ? state.stays.map((stay) => (
+          <StayCard key={stay.title} stay={stay} />
+        )) : <EmptyStays />}
+      </div>
     </div>
   );
 };

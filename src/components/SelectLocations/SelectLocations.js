@@ -1,5 +1,6 @@
-import styles from './SelectLocations.module.css';
 import { useHandleLocation } from 'hooks/location';
+
+import styles from './SelectLocations.module.css';
 
 const LocationsList = () => {
   const [handleLocation] = useHandleLocation();
@@ -11,7 +12,8 @@ const LocationsList = () => {
           <li
             className={styles['item-location']}
             key={location.shortName}
-            onClick={() => handleLocation.set(location)}>
+            onClick={() => handleLocation.set(location)}
+          >
             <span className="material-icons">location_on</span>
             {location.longName}
           </li>

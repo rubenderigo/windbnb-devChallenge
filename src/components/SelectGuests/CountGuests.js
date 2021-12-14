@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './CountGuests.module.css';
 
 const CountGuests = ({ title, desciption, value, setValue }) => {
@@ -12,6 +14,20 @@ const CountGuests = ({ title, desciption, value, setValue }) => {
       </div>
     </div>
   );
+};
+
+CountGuests.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  value: PropTypes.number,
+  setValue: PropTypes.func,
+};
+
+CountGuests.defaultProps = {
+  title: '',
+  description: '',
+  value: 0,
+  setValue: () => {},
 };
 
 export default CountGuests;

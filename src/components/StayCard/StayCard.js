@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './StayCard.module.css';
 
 const StayCard = ({ stay }) => {
@@ -12,8 +14,12 @@ const StayCard = ({ stay }) => {
       />
       <div className={styles['header-stay']}>
         <div>
-          {stay.superHost && ( <p className={styles['super-host-stay']}>Super Host</p> )}
-          <p className={styles['type-stay']}>{`${stay.type} ${stay.beds ? ` . ${stay.beds} beds` : ``}`}</p>
+          {stay.superHost && (
+            <p className={styles['super-host-stay']}>Super Host</p>
+          )}
+          <p className={styles['type-stay']}>{`${stay.type} ${
+            stay.beds ? ` . ${stay.beds} beds` : ``
+          }`}</p>
         </div>
         <div className={styles['rating-container']}>
           <span className={`material-icons ${styles['star']}`}>star</span>
@@ -23,6 +29,14 @@ const StayCard = ({ stay }) => {
       <p className={styles['title-stay']}>{stay.title}</p>
     </div>
   );
+};
+
+StayCard.propTypes = {
+  stay: PropTypes.object,
+};
+
+StayCard.defaultProps = {
+  stay: {},
 };
 
 export default StayCard;

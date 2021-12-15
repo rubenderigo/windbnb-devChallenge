@@ -20,8 +20,6 @@
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -30,11 +28,11 @@
 - [How to use](#how-to-use)
 - [Contact](#contact)
 
-<!-- OVERVIEW -->
-
 ## Overview
 
 [<img src="https://i.imgur.com/BZ4EPJh.png">](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
+
+- [Demo](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
 
 ### Built With
 

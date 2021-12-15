@@ -34,7 +34,7 @@
 
 ## Overview
 
-[<img src="https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061" width="50%">](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
+[<img src="https://ibb.co/k9QP16K" width="50%">](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
 
 ### Built With
 

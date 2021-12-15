@@ -34,14 +34,7 @@
 
 ## Overview
 
-![demo](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
-
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+[<img src="https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061" width="50%">](https://www.loom.com/share/bcd5c4fe36d24b0fa44338663df72061)
 
 ### Built With
 
@@ -69,5 +62,5 @@ $ npm start
 ## Contact me
 
 - Website [windbnb-dev-challenge.netlify.app](https://windbnb-dev-challenge.netlify.app)
-- GitHub [@rubenderigo](https://{github.com/rubenderigo})
-- LinkedIn [Ruben Derigo](linkedin.com/in/ruben-derigo-04004a193)
+- GitHub [@rubenderigo](https://github.com/rubenderigo)
+- LinkedIn [Ruben Derigo](https://linkedin.com/in/ruben-derigo-04004a193)
